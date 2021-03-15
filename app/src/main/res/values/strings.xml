@@ -60,6 +60,7 @@
         <item>JVMDeveloperID @KotlinID @IDDevOps</item>
         <item>Nusantara Beta Studio</item>
     </string-array>
+
     <string-array name="followers">
         <item>56995</item>
         <item>5153</item>
@@ -84,6 +85,7 @@
         <item>61</item>
         <item>10</item>
     </string-array>
+
     <string-array name="avatar">
         <item>@drawable/user1</item>
         <item>@drawable/user2</item>
