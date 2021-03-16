@@ -1,61 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="140dp">
+    android:layout_marginTop="5dp"
+    android:layout_height="100dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/avatarlist"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignBottom="@id/userNama"
-            android:layout_marginStart="15dp"
-            android:layout_marginBottom="-44dp"
-            android:layout_toEndOf="@+id/avatarlist"
-            android:src="@drawable/database" />
+            android:id="@+id/avatarlist"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp" />
 
         <TextView
-            android:id="@+id/userNama"
+            android:id="@+id/Namalist"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            style="@style/usernamePage"
+            android:layout_height="50dp"
+            style="@style/namePagelist"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/avatarlist" />
 
         <TextView
-            android:id="@+id/repo"
-            style="@style/repositorylist"
-            android:layout_width="39dp"
-            android:layout_height="55dp"
-            android:layout_alignBottom="@+id/userNama"
-            android:layout_marginStart="39dp"
-            android:layout_marginBottom="-65dp"
-            android:layout_toEndOf="@+id/avatarlist" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignBottom="@id/userNama"
-            android:layout_marginStart="89dp"
-            android:layout_marginBottom="-43dp"
-            android:layout_toEndOf="@+id/avatarlist"
-            android:src="@drawable/company" />
-
-        <TextView
-            android:id="@+id/companynya"
-            style="@style/repositorylist"
-            android:layout_width="178dp"
-            android:layout_height="56dp"
-            android:layout_alignBottom="@id/userNama"
-            android:layout_marginStart="113dp"
-            android:layout_marginBottom="-65dp"
+            android:id="@+id/usernamelist"
+            style="@style/usernamenyalist"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/Namalist"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="-32dp"
             android:layout_toEndOf="@id/avatarlist" />
     </RelativeLayout>
 

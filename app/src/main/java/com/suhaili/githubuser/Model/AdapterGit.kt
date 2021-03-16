@@ -24,9 +24,8 @@ class AdapterGit(val data : ArrayList<GitModel>) : RecyclerView.Adapter<AdapterG
             .apply(RequestOptions().override(80,80))
             .into(holder.ViewList.avatarlist)
 
-        holder.ViewList.userNama.text = datapos.username
-        holder.ViewList.repo.text = datapos.repository
-        holder.ViewList.companynya.text = datapos.company
+        holder.ViewList.Namalist.text = datapos.name
+        holder.ViewList.usernamelist.text = datapos.username
     }
 
     override fun getItemCount(): Int {

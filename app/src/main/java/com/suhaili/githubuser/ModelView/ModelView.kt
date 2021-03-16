@@ -3,7 +3,6 @@ package com.suhaili.githubuser.ModelView
 
 
 import android.content.res.TypedArray
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.suhaili.githubuser.Model.AdapterGit
@@ -11,7 +10,7 @@ import com.suhaili.githubuser.Model.GitModel
 import com.suhaili.githubuser.View.MainActivity
 
 
-class ModelView(val ListRec : RecyclerView): AppCompatActivity() {
+class ModelView(val ListRec : RecyclerView){
 
     var Stusername :  Array<String> = arrayOf()
     var Stname :  Array<String> = arrayOf()
@@ -58,12 +57,5 @@ class ModelView(val ListRec : RecyclerView): AppCompatActivity() {
         ListRec.layoutManager = LinearLayoutManager(MainActivity().baseContext)
         ListRec.adapter = AdapterGit(getData)
     }
-
-
-
-
-
-
-
 
 }
