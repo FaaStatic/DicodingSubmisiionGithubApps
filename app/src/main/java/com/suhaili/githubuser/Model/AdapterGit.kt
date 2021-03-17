@@ -29,7 +29,7 @@ class AdapterGit(val data : ArrayList<GitModel>) : RecyclerView.Adapter<AdapterG
             .into(holder.ViewList.avatarlist)
 
         holder.ViewList.Namalist.text = "Name : "+datapos.name
-        holder.ViewList.usernamelist.text ="Username : "+datapos.username
+        holder.ViewList.usernamelist.text ="Username : @"+datapos.username
         holder.itemView.setOnClickListener {
             val dataParcel = GitModel(
                     datapos.username,
