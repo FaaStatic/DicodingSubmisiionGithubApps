@@ -2,15 +2,30 @@ package com.suhaili.githubuser.ModelView
 
 
 
+import android.content.Intent
+import android.content.res.Configuration
 import android.content.res.TypedArray
+import android.graphics.Color
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.suhaili.githubuser.Model.AdapterGit
 import com.suhaili.githubuser.Model.GitModel
+import com.suhaili.githubuser.R
+import com.suhaili.githubuser.View.Detail
 import com.suhaili.githubuser.View.MainActivity
+import com.suhaili.githubuser.View.Splash
 
 
-class ModelView(val ListRec : RecyclerView){
+class ModelView(val ListRec : RecyclerView?){
+
+    constructor() : this(null)
+
+
+
+    companion object{
+        const val key = "dataya"
+        const val about = "yaya"
+    }
 
     var Stusername :  Array<String> = arrayOf()
     var Stname :  Array<String> = arrayOf()
@@ -54,8 +69,13 @@ class ModelView(val ListRec : RecyclerView){
         }
 
     fun getRecycler(){
-        ListRec.layoutManager = LinearLayoutManager(MainActivity().baseContext)
-        ListRec.adapter = AdapterGit(getData)
+        ListRec?.layoutManager = LinearLayoutManager(MainActivity().baseContext)
+        ListRec?.adapter = AdapterGit(getData)
     }
+
+
+
+
+
 
 }

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Detail">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatardetail"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fullname"
+            style="@style/nameDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avatardetail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            style="@style/usernameDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avatardetail"
+            app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="393dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avatardetail"
+            app:layout_constraintTop_toBottomOf="@+id/username">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/shapedetail">
+
+                        <TextView
+                            style="@style/detail2"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:text="Repository" />
+
+                        <TextView
+                            android:id="@+id/repo"
+                            style="@style/detailnya"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginVertical="15dp"
+                            android:textAlignment="center" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/shapedetail">
+
+                        <TextView
+                            style="@style/detail2"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:text="Follower" />
+
+                        <TextView
+                            android:id="@+id/diikutin"
+                            style="@style/detailnya"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginVertical="15dp"
+                            android:textAlignment="center" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/shapedetail">
+
+                        <TextView
+                            style="@style/detail2"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:text="Following" />
+
+                        <TextView
+                            android:id="@+id/ikutin"
+                            style="@style/detailnya"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginVertical="15dp"
+                            android:textAlignment="center" />
+                    </FrameLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="500dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/office"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/comp"
+                        style="@style/detail1"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="Company : " />
+
+                    <TextView
+                        android:id="@+id/company"
+                        style="@style/loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="55dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="49dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/company" />
+
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="500dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/location"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/detail1"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="Location : " />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/address" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        style="@style/loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="55dp" />
+
+                </FrameLayout>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+
+</ScrollView>
